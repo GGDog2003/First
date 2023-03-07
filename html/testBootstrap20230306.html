@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试Bootstrap</title>
+    <script type="text/javascript">
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+            window.alert("手机端进入");
+              window.location("testPhone.html");
+        } else {
+
+            window.alert("电脑端进入");
+
+        }
+    </script>
+
+    <style type="text/css">
+        @import "../css/bootstrap-css/bootstrap.min.css";
+
+    </style>
+
+    <style type="text/css">
+
+        .breadcrumb > li + li:before
+
+        {
+            color: #CCCCCC;
+            content: "";
+            padding: 0 5px;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="../css/bootstrap-css/bootstrap.css">
+
+    <script src="../JS/bootstrap-js/jquery.min.js"></script>
+    <script src="../JS/bootstrap-js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<nav aria-label="breadcrumb">
+    <div >
+        <ol class="breadcrumb" style="left: 100%" >
+            <li class="breadcrumb-item" style="left: 100%"><a href="#">首页</a></li>
+            <li class="breadcrumb-item"><a  href="#">导航</a></li>
+            <li class="ml-auto">
+                <button class="breadcrumb-item btn btn-success">关于</button>
+                <button class="breadcrumb-item btn btn-warning">注册</button>
+                <button class="breadcrumb-item btn btn-primary">登录</button>
+                <!-- 删除breadcrumb的斜杠分割：.breadcrumb-item + .breadcrumb-item::before将content内容去掉
+
+                https://blog.csdn.net/takeki_/article/details/120096973
+
+                -->
+        </ol>
+
+    </div>
+
+</nav>
+
+<!--<ul class="nav">-->
+<!--    <li class="nav-item">-->
+<!--        <a class="nav-link" href="#" >首页</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--        <a class="nav-link" href="#" >导航</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--        <a class="nav-link" href="#" >简介</a>-->
+<!--    </li>-->
+<!--    <li class="nav-item">-->
+<!--        <a class="nav-link" href="#" >关于</a>-->
+<!--    </li>-->
+<!--</ul>-->
+
+<!--<div >-->
+<!--    <button type="button" class="btn btn-primary btn-lg" style="outline: none">大按钮</button>-->
+<!--    <button type="button" class="btn btn-primary btn-sm"  >小按钮</button>-->
+<!--</div>-->
+<!-- 在bootstrap里用轮播图-->
+<div id="Carousel" class="carousel slide" data-ride="carousel">
+    <!--标识图标：底下的小横线-->
+    <ol class="carousel-indicators">
+        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#Carousel" data-slide-to="1"></li>
+        <li data-target="#Carousel" data-slide-to="2"></li>
+    </ol>
+    <!--幻灯片-->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../media/deepSeaBg1.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption">
+                <h5>轮播图效果</h5>
+                <p>参宿</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../media/dinazedai.png" class="d-block w-100" alt="">
+            <div class="carousel-caption">
+                <h5>轮播图效果</h5>
+                <p>迪娜泽戴</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="../media/yaoyao.png" class="d-block w-100" alt="">
+            <div class="carousel-caption">
+                <h5>轮播图效果</h5>
+                <p>瑶瑶！</p>
+            </div>
+        </div>
+    </div>
+    <!--控制按钮-->
+    <a class="carousel-control-prev" href="#Carousel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#Carousel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+<script>
+    $('.carousel').carousel({
+        interval: 2500
+    })
+</script>
+
+
+</body>
+</html>
